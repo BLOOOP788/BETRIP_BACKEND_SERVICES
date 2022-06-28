@@ -98,6 +98,7 @@ public class DriverServiceImpl implements DriverService {
                         .withEmail(request.getEmail())
                         .withPassword(request.getPassword())
                         .withPfp(request.getPfp())
+                        .withPuntuacion(request.getPuntuacion())
 
                 ))
                 .orElseThrow(()->new ResourceNotFoundException(ENTITY,driverId));

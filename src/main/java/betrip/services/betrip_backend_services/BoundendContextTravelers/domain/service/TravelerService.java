@@ -16,5 +16,5 @@ public interface TravelerService  {
     Traveler update(Long travelerId,Traveler request);
     ResponseEntity<?> delete(Long travelerId);
     Traveler authenticate (AuthenticateRequest request);
-
+    boolean isTravelerDangerous(Long travelerId);
 }

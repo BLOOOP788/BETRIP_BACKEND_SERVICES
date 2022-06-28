@@ -42,5 +42,7 @@ public class UpdateDriverResource {
     private Long number_seats;
     @NotNull
     private String phoneNumber;
+    @NotNull
+    private int puntuacion;
 
 }
