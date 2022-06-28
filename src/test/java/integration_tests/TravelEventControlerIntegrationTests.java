@@ -14,7 +14,7 @@ import betrip.services.betrip_backend_services.BoundenContextTravelEvents.domain
 import betrip.services.betrip_backend_services.BoundenContextTravelEvents.domain.service.TravelEventService;
 import betrip.services.betrip_backend_services.BoundendContextTravelers.domain.model.entity.Traveler;
 
-@RunWith(SpringRunner.class)
+
 @SpringBootTest(classes = BetripBackendServicesApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 
 public class TravelEventControlerIntegrationTests{

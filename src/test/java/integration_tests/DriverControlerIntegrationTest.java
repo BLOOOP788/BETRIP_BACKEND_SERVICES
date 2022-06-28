@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import betrip.services.betrip_backend_services.BetripBackendServicesApplication;
 
-@RunWith(SpringRunner.class)
+
 @SpringBootTest(classes = BetripBackendServicesApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class DriverControlerIntegrationTest {
 	
@@ -25,7 +25,9 @@ public class DriverControlerIntegrationTest {
 	TestRestTemplate restTemplate = new TestRestTemplate();
 
 	HttpHeaders headers = new HttpHeaders();
-
+	private String createURLWithPort(String uri) {
+		return "http://localhost:8080" + uri;
+	}
 	@Test
 	public void TestGetDriverbyId() throws JSONException {
 
@@ -38,7 +40,5 @@ public class DriverControlerIntegrationTest {
 				"{\"id\":2,\"name\":\"Ruben\",\"last_name\":\"Perez\",\"age\":30,\"dni\":\"75643125\",\"district\":\"San Isidro\",\"email\":\"driver1@mail.com\",\"password\":\"qwerty\",\"type\":\"auto\",\"model\":\"yaris\",\"brand\":\"toyota\",\"licence_plate\":\"UPC-123\",\"licence_code\":\"Q75643125\",\"number_seats\":4,\"phoneNumber\":\"94513154\",\"puntuacion\":5,\"pfp\":\"fotito.png\"}";
 		JSONAssert.assertEquals(expected, response.getBody(), false);
 	}
-	private String createURLWithPort(String uri) {
-		return "http://localhost:" + port + uri;
-	}	
+
 }
