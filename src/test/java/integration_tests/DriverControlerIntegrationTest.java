@@ -26,7 +26,7 @@ public class DriverControlerIntegrationTest {
 
 	HttpHeaders headers = new HttpHeaders();
 	private String createURLWithPort(String uri) {
-		return "http://localhost:8080" + uri;
+		return "http://localhost:8080"+ uri;
 	}
 	@Test
 	public void TestGetDriverbyId() throws JSONException {
