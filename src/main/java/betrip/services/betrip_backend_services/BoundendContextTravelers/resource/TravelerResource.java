@@ -16,6 +16,7 @@ public class TravelerResource {
     private String password;
     private String phoneNumber;
     private String pfp;
+    private int puntuacion;
 }
 
 

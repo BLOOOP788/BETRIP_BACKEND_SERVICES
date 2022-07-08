@@ -95,6 +95,9 @@ public class Driver extends AuditModel {
     @Size(max=100)
     @Column(unique = true)
     private  String phoneNumber;
+    
+    @NotNull
+    private int puntuacion;
 
 
 }

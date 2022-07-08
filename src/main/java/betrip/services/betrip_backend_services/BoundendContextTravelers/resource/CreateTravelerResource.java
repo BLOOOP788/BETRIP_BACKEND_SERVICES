@@ -29,4 +29,6 @@ public class CreateTravelerResource {
     @NotNull
     @Size(max = 1000)
     private String pfp;
+    @NotNull
+    private int puntuacion;
 }

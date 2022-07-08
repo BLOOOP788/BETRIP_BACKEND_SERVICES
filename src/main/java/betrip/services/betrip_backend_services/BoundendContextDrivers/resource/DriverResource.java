@@ -27,4 +27,5 @@ public class DriverResource {
     private String licence_code;
     private Long number_seats;
     private String phoneNumber;
+    private int puntuacion;
 }

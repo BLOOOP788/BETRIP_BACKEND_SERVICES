@@ -57,4 +57,6 @@ public class CreateDriverResource {
     @NotNull
     private String phoneNumber;
 
+    @NotNull
+    private int puntuacion;
 }
