@@ -1,4 +1,4 @@
-package integration_tests;
+//package integration_tests;
 
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
@@ -16,29 +16,29 @@ import org.springframework.test.context.junit4.SpringRunner;
 import betrip.services.betrip_backend_services.BetripBackendServicesApplication;
 
 
-@SpringBootTest(classes = BetripBackendServicesApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class DriverControlerIntegrationTest {
+//@SpringBootTest(classes = BetripBackendServicesApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+//public class DriverControlerIntegrationTest {
 	
-	@LocalServerPort
-	private int port;
+	//@LocalServerPort
+	//private int port;
 
-	TestRestTemplate restTemplate = new TestRestTemplate();
+	//TestRestTemplate restTemplate = new TestRestTemplate();
 
-	HttpHeaders headers = new HttpHeaders();
-	private String createURLWithPort(String uri) {
-		return "http://localhost:8080" + uri;
-	}
-	@Test
-	public void TestGetDriverbyId() throws JSONException {
+	//HttpHeaders headers = new HttpHeaders();
+	//private String createURLWithPort(String uri) {
+	//	return "http://localhost:8080" + uri;
+	//}
+	//@Test
+	//public void TestGetDriverbyId() throws JSONException {
 
-		HttpEntity<String> entity = new HttpEntity<String>(null, headers);
+	//	HttpEntity<String> entity = new HttpEntity<String>(null, headers);
 
-		ResponseEntity<String> response = restTemplate.exchange(createURLWithPort("/api/v1/drivers/2"),
-				HttpMethod.GET, entity, String.class);
+	//	ResponseEntity<String> response = restTemplate.exchange(createURLWithPort("/api/v1/drivers/2"),
+	//			HttpMethod.GET, entity, String.class);
 
-		String expected = 
-				"{\"id\":2,\"name\":\"Ruben\",\"last_name\":\"Perez\",\"age\":30,\"dni\":\"75643125\",\"district\":\"San Isidro\",\"email\":\"driver1@mail.com\",\"password\":\"qwerty\",\"type\":\"auto\",\"model\":\"yaris\",\"brand\":\"toyota\",\"licence_plate\":\"UPC-123\",\"licence_code\":\"Q75643125\",\"number_seats\":4,\"phoneNumber\":\"94513154\",\"puntuacion\":5,\"pfp\":\"fotito.png\"}";
-		JSONAssert.assertEquals(expected, response.getBody(), false);
-	}
+	//	String expected =
+	//			"{\"id\":2,\"name\":\"Ruben\",\"last_name\":\"Perez\",\"age\":30,\"dni\":\"75643125\",\"district\":\"San Isidro\",\"email\":\"driver1@mail.com\",\"password\":\"qwerty\",\"type\":\"auto\",\"model\":\"yaris\",\"brand\":\"toyota\",\"licence_plate\":\"UPC-123\",\"licence_code\":\"Q75643125\",\"number_seats\":4,\"phoneNumber\":\"94513154\",\"puntuacion\":5,\"pfp\":\"fotito.png\"}";
+	//	JSONAssert.assertEquals(expected, response.getBody(), false);
+	//}
 
-}
+//}
