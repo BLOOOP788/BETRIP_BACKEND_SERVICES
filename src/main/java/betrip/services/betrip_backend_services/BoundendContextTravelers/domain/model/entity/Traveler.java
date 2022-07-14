@@ -54,6 +54,9 @@ public class Traveler extends AuditModel {
     @NotNull
     @Size(max=1000)
     private  String pfp;
+    
+    @NotNull
+    private int puntuacion;
 
 
 
